@@ -1,7 +1,7 @@
 export const navItems = [
-  { name: "About", link: "#about" },
+  { name: "Home", link: "#Home" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "YouTubeChannel", link: "#YouTubechannal" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -28,8 +28,8 @@ export const gridItems = [
   },
   {
     id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
+    title: "My favorite stack",
+    description: "I have knowledge of many stacks, but this one is",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
