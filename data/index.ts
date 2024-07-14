@@ -8,28 +8,27 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "Welcome to my Portfolio",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
+    imgClassName: "w-32 md:w-78 lg:w-96",
+    titleClassName: "absolute justify-end md:bottom-[100px] left-[10px] md:left-[300px] ",
+    img: "/artur-icon.svg",
     spareImg: "",
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "Network",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-2 ",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "",
-    spareImg: "",
   },
   {
     id: 3,
     title: "My favorite stack",
-    description: "I have knowledge of many stacks, but this one is",
+    description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -49,7 +48,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently Working like Front-End at Task4IT",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -205,13 +204,21 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/artursantana",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/youtube-icon.png",
+    link: "https://youtube.com/@artursantana3107?si=kipwo8HrHnGe8cP7",
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "www.linkedin.com/in/artur-santana-8a9902238",
+  },
+  {
+    id: 4,
+    img: "/insta-icon.webp",
+    link: "https://www.instagram.com/artur.santana.843?igsh=MWJubnZoMmc1M3BkYQ%3D%3D&utm_source=qr",
   },
 ];

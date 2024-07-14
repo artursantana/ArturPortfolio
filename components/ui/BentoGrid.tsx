@@ -4,24 +4,27 @@ import Lottie from "react-lottie";
 import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./GradientBg";
-import GridGlobe from "./GridGlobe";
+
 import animationData from "@/data/confetti.json";
+import { socialMedia } from "@/data";
 import MagicButton from "../MagicButton";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   id?: number;
   className?: string;
   title?: string | React.ReactNode;
-  alt?: string
+  alt?: string;
   description?: string | React.ReactNode;
   img?: string;
   imgClassName?: string;
   titleClassName?: string;
   spareImg?: string;
   children?: React.ReactNode;
-  item?: string
-  i?: string
+  item?: string;
+  i?: string;
+  src?: string
 }
 
 export const BentoGrid = ({className,children}: Props) => {
@@ -47,7 +50,8 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
-}: Props) => {
+  }: Props) => {
+
 
   const leftLists = ["/nextjs-icon.png", "/typescript-icon.png"];
   const rightLists = ["/tailwind-css-icon.png","/node-icon.png"];
@@ -108,6 +112,7 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+
         {id === 6 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
@@ -129,8 +134,28 @@ export const BentoGridItem = ({
           >
             {title}
           </div>
-
-         
+          {id === 2 && (
+            <BackgroundGradientAnimation>
+              <div className="flex justify-center items-center text-center pt-[80px]">
+                {socialMedia.map((e) => (
+                  <div
+                    key={e.id}
+                    className="w-[60px] h-[60px] md:w-[60px] md:h-[60px] z-50 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300 text-red m-2 "
+                  >
+                    <Link href={e.link} target="blank">
+                      <Image
+                        className="md:w-[30px]"
+                        src={e.img}
+                        width={28}
+                        height={22}
+                        alt={e.img}
+                      />
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </BackgroundGradientAnimation>
+          )}
 
           {id === 3 && (
             <div className="flex gap-1 lg:gap-5 w-fit absolute lg:-right-2 pt-2">
