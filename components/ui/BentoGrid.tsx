@@ -7,6 +7,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 
 import animationData from "@/data/confetti.json";
 import { socialMedia } from "@/data";
+import { gridItems } from "@/data";
 import MagicButton from "../MagicButton";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +16,7 @@ interface Props {
   id?: number;
   className?: string;
   title?: string | React.ReactNode;
-  alt?: string;
+  alt?: any;
   description?: string | React.ReactNode;
   img?: string;
   imgClassName?: string;
@@ -24,7 +25,7 @@ interface Props {
   children?: React.ReactNode;
   item?: string;
   i?: string;
-  src?: string
+  src?: any;
 }
 
 export const BentoGrid = ({className,children}: Props) => {
@@ -134,6 +135,7 @@ export const BentoGridItem = ({
           >
             {title}
           </div>
+          
           {id === 2 && (
             <BackgroundGradientAnimation>
               <div className="flex justify-center items-center text-center pt-[80px]">
